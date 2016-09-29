@@ -1,4 +1,4 @@
-package datastructure;
+package dsa;
 
 /**
  * Created by minhazur on 1/27/16.
