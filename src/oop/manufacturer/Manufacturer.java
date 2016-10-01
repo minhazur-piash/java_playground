@@ -1,8 +1,7 @@
-package packageb;
+package oop.manufacturer;
 
-import packagea.Car;
-import packagea.Premio;
-import packagea.Toyota;
+import oop.cars.Car;
+import oop.cars.Premio;
 
 /**
  * Created by Frenclub on 8/24/15.

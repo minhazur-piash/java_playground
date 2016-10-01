@@ -2,22 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d354592d-3ea7-4577-a986-e5bd5bafc98c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/problemsolving/devskill/BigSum.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/problemsolving/Brush.java" afterPath="$PROJECT_DIR$/src/problemsolving/lightoj/Brush.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/problemsolving/CircleInSquare.java" afterPath="$PROJECT_DIR$/src/problemsolving/lightoj/CircleInSquare.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/problemsolving/FantabulousBirthday.java" afterPath="$PROJECT_DIR$/src/problemsolving/lightoj/FantabulousBirthday.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/problemsolving/GreetingFromLightOJ.java" afterPath="$PROJECT_DIR$/src/problemsolving/lightoj/GreetingFromLightOJ.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/problemsolving/HexBonacci.java" afterPath="$PROJECT_DIR$/src/problemsolving/lightoj/HexBonacci.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/problemsolving/IntegerDivisibility.java" afterPath="$PROJECT_DIR$/src/problemsolving/lightoj/IntegerDivisibility.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/problemsolving/KSat.java" afterPath="$PROJECT_DIR$/src/problemsolving/lightoj/KSat.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/problemsolving/MonkLoveFood.java" afterPath="$PROJECT_DIR$/src/problemsolving/hackerearth/MonkLoveFood.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/problemsolving/MonkOnTrek.java" afterPath="$PROJECT_DIR$/src/problemsolving/hackerearth/MonkOnTrek.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/problemsolving/MonkTask.java" afterPath="$PROJECT_DIR$/src/problemsolving/hackerearth/MonkTask.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/problemsolving/OppositeTask.java" afterPath="$PROJECT_DIR$/src/problemsolving/hackerearth/OppositeTask.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/problemsolving/Sorting.java" afterPath="$PROJECT_DIR$/src/problemsolving/hackerearth/Sorting.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/problemsolving/StringProblems.java" afterPath="$PROJECT_DIR$/src/problemsolving/hackerearth/StringProblems.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MathUtils.java" afterPath="$PROJECT_DIR$/src/MathUtils.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/packagea/BMW.java" afterPath="$PROJECT_DIR$/src/oop/cars/BMW.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/packagea/Car.java" afterPath="$PROJECT_DIR$/src/oop/cars/Car.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/packagea/Motor.java" afterPath="$PROJECT_DIR$/src/oop/cars/Motor.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/packagea/Premio.java" afterPath="$PROJECT_DIR$/src/oop/cars/Premio.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/packagea/Toyota.java" afterPath="$PROJECT_DIR$/src/oop/cars/Toyota.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/packageb/Manufacturer.java" afterPath="$PROJECT_DIR$/src/oop/manufacturer/Manufacturer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Launcher.java" afterPath="$PROJECT_DIR$/src/Launcher.java" />
     </list>
     <ignored path="Test Project.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -838,16 +829,16 @@
       <workItem from="1473330674400" duration="2817000" />
       <workItem from="1474377420186" duration="9329000" />
       <workItem from="1474666113723" duration="4543000" />
-      <workItem from="1474719941236" duration="17985000" />
+      <workItem from="1474719941236" duration="18256000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="125859000" />
+    <option name="totallyTimeSpent" value="126130000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1366" height="698" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -860,7 +851,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29372936" sideWeight="0.4939577" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20468278" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20468278" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32888147" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -904,7 +895,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/packageb/Manufacturer.java">
+    <entry file="file://$PROJECT_DIR$/src/oop/manufacturer/Manufacturer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="15" column="5" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />

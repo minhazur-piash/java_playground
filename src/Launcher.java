@@ -1,12 +1,6 @@
-import packagea.Car;
-import packageb.Manufacturer;
-
-import java.math.BigInteger;
-import java.nio.charset.Charset;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.*;
-import java.util.concurrent.LinkedBlockingDeque;
 
 /**
  * Created by Frenclub on 7/29/15.
