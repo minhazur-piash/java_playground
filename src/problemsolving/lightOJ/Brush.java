@@ -1,4 +1,4 @@
-package problemsolving;
+package problemsolving.lightoj;
 
 import java.util.Scanner;
 

@@ -1,6 +1,4 @@
-package problemsolving;
-
-import com.sun.tools.javac.util.ArrayUtils;
+package problemsolving.lightoj;
 
 import java.util.Arrays;
 import java.util.Scanner;
