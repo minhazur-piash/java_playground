@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class Dummy {
 
 
-    //Smelly Code Example
+    //Smelly Code Example. Remove indention to make it more smelly.
     public static void main(String[] args) {
         Scanner i = new Scanner(System.in);
         int cn = 0, cp = 0, s = 0;
