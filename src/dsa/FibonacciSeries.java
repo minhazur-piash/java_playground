@@ -11,6 +11,9 @@ public class FibonacciSeries {
     }
 
     /**
+     * By definition, the first two numbers in the Fibonacci sequence are either 1 and 1, or 0 and 1,
+     * depending on the chosen starting point of the sequence, and each subsequent number is the sum of the previous two.
+     *
      * we should use dynamic programming to optimize this or get ready to sleep with this :P :P :P
      * @param position
      * @return
