@@ -1,5 +1,6 @@
 package problemsolving.devskill;
 
+import javax.xml.stream.events.Characters;
 import java.util.*;
 
 /**
@@ -13,8 +14,24 @@ public class CountIt {
 
         for (int tc = 1; tc <= cases; tc++) {
             String input = scanner.next();
+            char[] chars = input.toCharArray();
 
-            SortedMap<String, Integer> results = new TreeMap<>();
+
+            for(int i = 1; i < chars.length; i++) {
+                char c = chars[i];
+                int j = i;
+
+                while (j > 0 && c < chars[j - 1]) {
+                    chars[j] = chars[j - 1];
+                    j--;
+                }
+
+                chars[j] = c;
+            }
+
+            input = new String(chars);
+
+//            SortedMap<String, Integer> results = new TreeMap<>();
 
             System.out.println("Case " + tc + ":");
             while (!input.isEmpty()) {
@@ -23,12 +40,14 @@ public class CountIt {
                 int count = input.length() - alteredInput.length();
                 input = alteredInput;
 
-                results.put(Character.toString(ch), count);
+//                results.put(Character.toString(ch), count);
+
+                System.out.println(Character.toString(ch) + " " + count);
             }
 
-            for (Map.Entry<String, Integer> entry : results.entrySet()) {
+         /*   for (Map.Entry<String, Integer> entry : results.entrySet()) {
                 System.out.println(entry.getKey() + " " + results.get(entry.getKey()));
-            }
+            }*/
 
         }
 
