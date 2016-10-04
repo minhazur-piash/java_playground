@@ -8,8 +8,19 @@ package dsa;
 public class GCD {
     public static void main(String[] args) {
         System.out.println(new GCD().gcdRecursive(16, 15));
-        System.out.println(new GCD().gcdIterative(16, 15));
+        System.out.println(new GCD().getPrimeFactor(new GCD().gcdIterative(121, 242)));
 
+    }
+
+    public int getPrimeFactor(int number) {
+        for (int i = 2; i > 1; i++) {
+            if ((number % i == 0) && (number / i != 1)) {
+                number = number / i;
+                break;
+            }
+        }
+
+        return number;
     }
 
     //EuclideanAlgorithm. GCD(A,B) = GCD(B,R) [A = B*Q + R]
