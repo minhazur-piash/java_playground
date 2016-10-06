@@ -29,14 +29,11 @@ public class SixNCryption {
             // If A is perfectly divided by b then A is also perfectly divided by all the factors of b.
             multiplier = getMaximumPrimeFactor(multiplier);
 
-            for (int i = 0; i < noOfKeys; i++) {
-                keys[i] = keys[i] / multiplier;
-            }
-
             int sum = 0;
             for (int i = 0; i < noOfKeys; i++) {
-                sum += keys[i];
+                sum += keys[i] / multiplier;
             }
+
 
             System.out.println("Output: " + (encryptedNumber - sum));
 
