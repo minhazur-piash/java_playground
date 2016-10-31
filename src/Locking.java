@@ -14,6 +14,7 @@ public class Locking {
         adder.add(3);
         adder.add(4);
 
+
         new Thread(new Runnable() {
             int i = 1;
             @Override
@@ -35,7 +36,25 @@ public class Locking {
                 }
             }
         }).start();
+
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                while (true) {
+                    try {
+                        adder.show();
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+
+                }
+            }
+        }).start();
+
+
     }
+
+
 }
 
 
@@ -45,6 +64,7 @@ class Adder {
     public synchronized void add(Integer integer) {
         System.out.println("adding");
         items.add(integer);
+
         try {
             Thread.sleep(5 * 1000);
         } catch (InterruptedException e) {
@@ -62,12 +82,13 @@ class Adder {
         }
     }
 
-    public void show() {
-        Iterator<Integer> iterator = items.iterator();
-        while (iterator.hasNext()) {
-            System.out.print(iterator.next() + " ");
-        }
+    public void show() throws InterruptedException {
+//        Iterator<Integer> iterator = items.iterator();
+//        while (iterator.hasNext()) {
+//            System.out.print(iterator.next() + " ");
+//        }
 
-        System.out.println();
+        System.out.println("showing");
+        Thread.sleep(500);
     }
 }

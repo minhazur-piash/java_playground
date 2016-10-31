@@ -7,15 +7,15 @@ public class Toyota extends Car {
 
     private String companyInfo;
 
-    public Toyota() {
+    public Toyota() {   //default constructor is must for a base class if there is a parameterized constructor in it.
         this.inProgress = true;      // package private or default access
         this.brandName = "Toyota";   // protected access
-        System.out.println("Toyota constructor called");
+        System.out.println("Toyota default constructor called");
     }
 
     public Toyota(Boolean inProgress) {
         this.inProgress = inProgress;      // package private or default access
-        System.out.println(Toyota.this.getClass().getName() + "parameterized constructor called");
+        System.out.println(Toyota.this.getClass().getName() + " parameterized constructor called");
     }
 
     @Override

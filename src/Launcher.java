@@ -11,11 +11,35 @@ public class Launcher {
 
 
     public static void main(String[] args) {
+
+        String name = "piash";
+        System.out.println("Was it a car or a cat I saw?".substring(9, 12));
+
+        String name2 = "piash";
+
+        System.out.println("string is equal : " + (name == name2));
+
+         String s1 = "12345";
+         String s2 = "1234" + "5";
+         String s3 = new String("12345");
+         String s4 = "12345";
+
+        System.out.println();
+        System.out.println(s1 == s2);
+        System.out.println(s1 == s3);
+        System.out.println(s1 == s4);
+        System.out.println(s2 == s3);
+        System.out.println(s2 == s4);
+        System.out.println(s3 == s4);
+        System.out.println();
+
+
+        System.out.println(Integer.valueOf(1).equals(Long.valueOf(1)));
         Launcher launcher = new Launcher();
 
         Integer[] sols = {1, 2, 3};
 
-        System.out.print(Arrays.asList(sols).contains(1));
+        System.out.println(Arrays.asList(sols).contains(1));
 
         Thread thread = new Thread();
         launcher.recFind(1, 0, launcher.v.length - 1);
@@ -171,24 +195,17 @@ public class Launcher {
         countries.add("Bangladesh");
         countries.add("Bangladesh");
 
+        
+
+        countries.remove(0);
+
+        Map<String, String> s = new HashMap<>();
+        s.put(null, "");
+
         return countries;
     }
 
-    private static void threadingTestDrive() {
-        TestSync job = new TestSync();
 
-        Thread alpha = new Thread(job);
-        alpha.setName("ALPHA");
-
-        Thread beta = new Thread(job);
-        beta.setName("BETA");
-
-        alpha.start();
-        System.out.println("is running: " + job.isRunning());
-
-        beta.start();
-        System.out.println("is running: " + job.isRunning());
-    }
 
     private static void geometricProgressionTestDrive() {
         for (int i = 1; i < 10; i++) {

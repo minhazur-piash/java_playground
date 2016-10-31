@@ -5,6 +5,5 @@ package oop.cars;
  */
 public class BMW {
     public BMW(){
-        Toyota toyota = new Toyota();
     }
 }

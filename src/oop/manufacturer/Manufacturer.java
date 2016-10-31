@@ -8,9 +8,8 @@ import oop.cars.Premio;
  */
 
 public class Manufacturer{
-    public Manufacturer(){
-        Car car = new Premio();
+    public static void main(String[] args){
+        Car car = new Premio("XX2");
         car.printBrandName();
-//        car.equals()
     }
 }

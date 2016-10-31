@@ -7,7 +7,13 @@ public class Premio extends Toyota {
     private String model;
 
     public Premio() {
-        System.out.println("Premio constructor called");
+        System.out.println("Premio default constructor called");
+    }
+
+    public Premio(String model) {
+//        super(true);
+        System.out.println("Premio parameterized constructor called");
+        this.model = model;
     }
 
     public String getModel() {

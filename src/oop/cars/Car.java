@@ -8,8 +8,15 @@ public abstract class Car {
     protected String brandName;
     boolean inProgress;
 
+    //default constructor is must for a base class if there is a parameterized constructor in it.
+    // If constructor is private, class can not be inherited
     public Car() {
-        System.out.println("Car constructor called");
+        System.out.println("Car deafault constructor called");
+    }
+
+    public Car(boolean inProgress) {
+        this.inProgress = inProgress;
+        System.out.println("Car parameterized constructor called");
     }
 
     public abstract void setBrandName();

@@ -3,7 +3,7 @@ import java.util.Scanner;
 /**
  * Created by minhazur on 5/17/16.
  */
-public class Dummy {
+public class Dummy {   //Not refactored
 
 
     //Smelly Code Example. Remove indention to make it more smelly.
