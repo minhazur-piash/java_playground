@@ -1,3 +1,5 @@
+package playground;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -10,12 +12,12 @@ import java.sql.SQLException;
 
 public class NetworkUtils {
 /*    public  static boolean isConnectedToInternet() {
-        return SystemManager.getNetworkConnectionMode() == SystemManager.WIFI ? true : false;
+        return playground.SystemManager.getNetworkConnectionMode() == playground.SystemManager.WIFI ? true : false;
     }
 
     public static void dumpNetworkStatistics() {
-        byte[] networkData = SystemManager.getNetworkData().getBytes();
-        FileUtils.writeToFiles(networkData);
+        byte[] networkData = playground.SystemManager.getNetworkData().getBytes();
+        playground.FileUtils.writeToFiles(networkData);
     }
 
     public static void copyChars(char a1[], char a2[]) {

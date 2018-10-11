@@ -1,3 +1,5 @@
+package playground;
+
 class TestSync implements Runnable {
     private  int balance;
 

@@ -9,10 +9,10 @@ import java.util.*;
 public class InfixToPostfix {
 
     static String output = "";
-    static Stack<Character> operatorStack = new Stack();
+    static Stack operatorStack = new Stack();
 
     public static void main(String[] args) {
-        Dictionary<Character, Integer> precedences = new Hashtable();
+        Hashtable precedences = new Hashtable();
         precedences.put('-', 2);
         precedences.put('+', 2);
 
@@ -60,7 +60,7 @@ public class InfixToPostfix {
         }
     }
 
-    static void manageOperatorStack(Dictionary<Character, Integer> precedences, char character) {
+    private static void manageOperatorStack(Dictionary<Character, Integer> precedences, char character) {
         ListIterator<Character> iterator = operatorStack.listIterator(operatorStack.size());
         while (iterator.hasPrevious()) {
             char prevChar = iterator.previous();
@@ -68,8 +68,8 @@ public class InfixToPostfix {
                 return;
             }
 
-            int prePrecedence = precedences.get(new Character(prevChar));
-            int currentPrecedence = precedences.get(new Character(character));
+            int prePrecedence = precedences.get(prevChar);
+            int currentPrecedence = precedences.get(character);
 
             if (prePrecedence >= currentPrecedence) {
                 output += prevChar;
@@ -78,7 +78,7 @@ public class InfixToPostfix {
         }
     }
 
-    static void popTillStartingParenthesis() {
+    private static void popTillStartingParenthesis() {
         ListIterator<Character> iterator = operatorStack.listIterator(operatorStack.size());
         while (iterator.hasPrevious()) {
             char prevChar = iterator.previous();
@@ -92,7 +92,7 @@ public class InfixToPostfix {
 
     }
 
-    static boolean isOperator(char character) {
+    private static boolean isOperator(char character) {
         if (character == '+')
             return true;
         if (character == '-')
