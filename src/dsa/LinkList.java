@@ -66,7 +66,7 @@ public class LinkList {
      * @param node Fist node in the list
      * @return returns first node after reversed
      */
-    private static Node reversedLinkList(Node node) {
+    private static Node reversedDoublyLinkList(Node node) {
         Node prev = null;
         Node next;
 
@@ -77,6 +77,27 @@ public class LinkList {
             prev = node;
 
             node = next;
+        }
+
+        return prev;
+    }
+
+    /**
+     *
+     * @param currentNode Fist currentNode in the list
+     * @return returns first currentNode after reversed
+     */
+    private static Node reversedLinkList(Node currentNode) {
+        Node prev = null;
+        Node next;
+
+        while (currentNode != null) {
+            next = currentNode.next;
+            currentNode.next = prev;
+//            currentNode.prev = next;  //We don't need this
+            prev = currentNode;
+
+            currentNode = next;
         }
 
         return prev;
