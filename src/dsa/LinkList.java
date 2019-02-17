@@ -63,7 +63,7 @@ public class LinkList {
 
     /**
      *
-     * @param node Fist node in the list
+     * @param node Fist node from the list
      * @return returns first node after reversed
      */
     private static Node reversedDoublyLinkList(Node node) {
@@ -84,8 +84,8 @@ public class LinkList {
 
     /**
      *
-     * @param currentNode Fist currentNode in the list
-     * @return returns first currentNode after reversed
+     * @param currentNode Fist node from the list
+     * @return returns first node after reversed
      */
     private static Node reversedLinkList(Node currentNode) {
         Node prev = null;
