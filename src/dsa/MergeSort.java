@@ -34,8 +34,6 @@ public class MergeSort {
     }
 
     private static void merger(int startIndex, int midIndex, int endIndex, int[] array) {
-        System.out.println("startIndex: " + startIndex + " midIndex: " + midIndex + " endIndex: " + endIndex);
-
         int tempArrayLength = (endIndex - startIndex) + 1;
         int[] tempArray = new int[tempArrayLength];
 
@@ -60,28 +58,17 @@ public class MergeSort {
             }
         }
 
-        System.out.println();
-
-        for (int j = 0; j < tempArray.length; j++) {
-            System.out.print(tempArray[j] + " ");
-        }
-
-        System.out.println("start: " + start + " mid: " + mid + " end: " + end + " i: " + i);
-
-
         for (int j = start; j <= midIndex - 1; j++) {
             tempArray[i++] = array[j];
         }
 
         for (int j = mid; j <= end; j++) {
-                tempArray[i++] = array[j];
+            tempArray[i++] = array[j];
         }
 
 
         for (int j = 0; j < tempArrayLength; j++) {
             array[startIndex + j] = tempArray[j];
         }
-
-        System.out.println();
     }
 }
