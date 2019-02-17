@@ -32,7 +32,7 @@ public class MergeSort {
             int midIndex = (startIndex + endIndex) / 2;
             applyMergeSort(startIndex, midIndex, students);
             applyMergeSort(midIndex + 1, endIndex, students);
-            
+
             merger(startIndex, midIndex + 1, endIndex, students);
         }
 
