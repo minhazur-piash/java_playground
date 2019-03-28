@@ -4,6 +4,14 @@ public class QuickFind {
 
     private int[] nodes;
 
+    public QuickFind(int nodesCount) {
+        this.nodes = new int[nodesCount];
+
+        for (int i = 0; i < nodesCount; i++) {
+            nodes[i] = i;
+        }
+    }
+
     /**
      *
      * @param p
