@@ -1,4 +1,6 @@
-package playground;
+package playground.refactoring;
+
+import playground.PageData;
 
 import java.util.Scanner;
 

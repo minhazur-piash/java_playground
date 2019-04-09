@@ -1,4 +1,4 @@
-package playground;
+package playground.refactoring;
 
 import java.util.Scanner;
 

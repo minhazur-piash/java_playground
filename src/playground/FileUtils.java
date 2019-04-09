@@ -1,9 +1,9 @@
 package playground;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
+import java.io.*;
+import java.util.function.Consumer;
+import java.util.function.Function;
+import java.util.function.Supplier;
 
 /**
  * Created by minhazur on 5/18/16.
@@ -14,7 +14,7 @@ public class FileUtils {
         File file = new File("networkData");
 
         try {
-            if(!file.exists()) {
+            if (!file.exists()) {
                 file.createNewFile();
             }
 
@@ -29,5 +29,32 @@ public class FileUtils {
             e.printStackTrace();
         }
     }
+
+    public static void readFile(String fileName, Consumer<String> consumer) {
+
+        // This will reference one line at a time
+        String line = null;
+
+        try {
+            // FileReader reads text files in the default encoding.
+            FileReader fileReader = new FileReader(fileName);
+
+            // Always wrap FileReader in BufferedReader.
+            BufferedReader bufferedReader = new BufferedReader(fileReader);
+
+            while ((line = bufferedReader.readLine()) != null) {
+                consumer.accept(line);
+            }
+
+            // Always close files.
+            bufferedReader.close();
+        } catch (FileNotFoundException ex) {
+            System.out.println("Unable to open file '" + fileName + "'");
+
+        } catch (IOException ex) {
+            System.out.println("Error reading file '" + fileName + "'");
+        }
+    }
+
 }
 
