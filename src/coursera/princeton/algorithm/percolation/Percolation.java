@@ -1,18 +1,14 @@
-package coursera.princeton.algorithm;
+package coursera.princeton.algorithm.percolation;
 
 import edu.princeton.cs.algs4.WeightedQuickUnionUF;
 import playground.FileUtils;
 
-import java.util.Arrays;
-import java.util.function.Consumer;
-import java.util.function.IntPredicate;
-import java.util.function.Supplier;
-
 public class Percolation {
 
-    private int[] sites;
-    private int rowLength;
-    private WeightedQuickUnionUF quickUnionUF;
+    private final int[] sites;
+    private final int rowLength;
+    private int numberOfOpenSites;
+    private final WeightedQuickUnionUF quickUnionUF;
 
     // create n-by-n grid, with all sites blocked
     public Percolation(int n) {
@@ -47,6 +43,7 @@ public class Percolation {
 
         int index = convertPercolationMatrixIndexToArrayIndex(row, col);
         sites[index] = 1;
+        numberOfOpenSites++;
 
         //connect to adjacent open sites
 
@@ -91,16 +88,25 @@ public class Percolation {
     public boolean isFull(int row, int col) {
         validate(row, col);
 
+        if (!isOpen(row, col)) {
+            return false;
+        }
+
         int index = convertPercolationMatrixIndexToArrayIndex(row, col);
-        return quickUnionUF.connected(0, index);
+        for (int i = 1; i <= rowLength ; i++) {
+            boolean isFull = quickUnionUF.connected(i, index);
+            if (isFull) {
+                return true;
+            }
+        }
+
+        return false;
+
     }
 
     // number of open sites
     public int numberOfOpenSites() {
-        long count = Arrays.stream(sites)
-                .filter( value -> value == 1)
-                .count();
-        return (int) count;
+        return numberOfOpenSites;
     }
 
     // does the system percolate?
@@ -109,11 +115,11 @@ public class Percolation {
     }
 
     private void validate(int row, int col) {
-        if (row < 0 || row > rowLength ) {
+        if (row < 1 || row > rowLength) {
             throw new IllegalArgumentException("Row " + row + " is not between 1 and " + rowLength);
         }
 
-        if (col < 0 || col > rowLength ) {
+        if (col < 1 || col > rowLength) {
             throw new IllegalArgumentException("Col " + col + " is not between 1 and " + rowLength);
         }
     }
@@ -121,7 +127,11 @@ public class Percolation {
     // test client (optional)
     public static void main(String[] args) {
 
-        String filePath = "/Users/minhaz/Books/DSA/Algorithms_Pt-1_Coursera/percolation/wayne98.txt";
+//        takeInputFromFileAndTest();
+    }
+
+    private static void takeInputFromFileAndTest() {
+        String filePath = "/Users/minhaz/Books/DSA/Algorithms_Pt-1_Coursera/percolation/input8-no.txt";
 
         final Percolation[] percolation = {null};
         FileUtils.readFile(filePath, line -> {
@@ -143,29 +153,15 @@ public class Percolation {
 
         boolean percolates = percolation[0].percolates();
         System.out.println(percolates);
-
-//        Percolation percolation = new Percolation(3);
-//        percolation.open(1, 3);
-//        percolation.open(2, 3);
-//        percolation.open(3, 3);
-//        percolation.open(3, 1);
-//        percolation.open(2, 1);
-//        percolation.open(1, 1);
-//
-//        /*boolean isOpen = percolation.isOpen(1, 1);
-//        System.out.println(isOpen);*/
-//
-//        boolean percolates = percolation.percolates();
-//        System.out.println(percolates);
     }
 
 
-    public int convertPercolationMatrixIndexToArrayIndex(int row, int column){
+    private int convertPercolationMatrixIndexToArrayIndex(int row, int column) {
         return getIndexFromMultiArray(rowLength, row - 1, column - 1) + 1;
     }
 
 
-    private  int getIndexFromMultiArray(int rowLength, int rowIndex, int columnIndex) {
+    private int getIndexFromMultiArray(int rowLength, int rowIndex, int columnIndex) {
         return (rowIndex * rowLength) + columnIndex;
     }
 }

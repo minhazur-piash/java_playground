@@ -2,8 +2,6 @@ package playground;
 
 import java.io.*;
 import java.util.function.Consumer;
-import java.util.function.Function;
-import java.util.function.Supplier;
 
 /**
  * Created by minhazur on 5/18/16.
