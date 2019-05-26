@@ -1,7 +1,7 @@
 package coursera.princeton.algorithm.percolation;
 
 import edu.princeton.cs.algs4.WeightedQuickUnionUF;
-import playground.FileUtils;
+//import playground.FileUtils;
 
 public class Percolation {
 
@@ -85,6 +85,7 @@ public class Percolation {
     }
 
     // is site (row, col) full open?
+    //FIXME: call to connected(r, c) is too many...try to minimize
     public boolean isFull(int row, int col) {
         validate(row, col);
 
@@ -131,15 +132,12 @@ public class Percolation {
     }
 
     private static void takeInputFromFileAndTest() {
-        String filePath = "/Users/minhaz/Books/DSA/Algorithms_Pt-1_Coursera/percolation/input8-no.txt";
+      /*  String filePath = "/Users/minhaz/Books/DSA/Algorithms_Pt-1_Coursera/percolation/input8-no.txt";
 
         final Percolation[] percolation = {null};
         FileUtils.readFile(filePath, line -> {
             line = line.replaceAll("\\s+", " ").trim();
-//            System.out.println(line);
-
             String[] words = line.split(" ");
-//            System.out.println(Arrays.toString(words));
             if (words.length == 1) {
                 int n = Integer.parseInt(words[0]);
                 percolation[0] = new Percolation(n);
@@ -152,7 +150,7 @@ public class Percolation {
         });
 
         boolean percolates = percolation[0].percolates();
-        System.out.println(percolates);
+        System.out.println(percolates);*/
     }
 
 

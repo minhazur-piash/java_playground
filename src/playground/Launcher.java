@@ -12,9 +12,32 @@ public class Launcher {
     int v[] = {10, 20, 40, 55, 60, 69, 100};
 
 
+    static class Node {
+        String item;
+        Node next;
+    }
+
     public static void main(String[] args) {
 
-        String name = "piash";
+        Node node = new Node();
+        node.item = "node 1";
+
+        Node node2 = node;
+
+        node = new Node();
+        node.item = "node 1 updated";
+
+        Integer b1 = new Integer(100);
+        Integer b2 = new Integer(100);
+        System.out.println(b1.equals(b2));
+
+
+        System.out.println(node2.item);
+        System.out.println(node.item);
+
+
+
+    /*    String name = "piash";
         System.out.println("Was it a car or a cat I saw?".substring(9, 12));
 
         String name2 = "piash";
@@ -44,7 +67,7 @@ public class Launcher {
         System.out.println(Arrays.asList(sols).contains(1));
 
         Thread thread = new Thread();
-        launcher.recFind(1, 0, launcher.v.length - 1);
+        launcher.recFind(1, 0, launcher.v.length - 1);*/
     }
 
     int recFind(double searchKey, int lowerBound, int upperBound) {
