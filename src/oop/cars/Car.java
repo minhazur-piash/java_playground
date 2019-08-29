@@ -20,6 +20,7 @@ public abstract class Car {
     }
 
     public abstract void setBrandName();
+    public abstract void doEnhancements();
 
     public void printBrandName() {
         System.out.println("Car brandName " + this.brandName);

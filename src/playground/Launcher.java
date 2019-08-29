@@ -19,56 +19,14 @@ public class Launcher {
 
     public static void main(String[] args) {
 
-        Node node = new Node();
-        node.item = "node 1";
 
-        Node node2 = node;
-
-        node = new Node();
-        node.item = "node 1 updated";
-
-        Integer b1 = new Integer(100);
-        Integer b2 = new Integer(100);
-        System.out.println(b1.equals(b2));
-
-
-        System.out.println(node2.item);
-        System.out.println(node.item);
-
-
-
-    /*    String name = "piash";
-        System.out.println("Was it a car or a cat I saw?".substring(9, 12));
-
-        String name2 = "piash";
-
-        System.out.println("string is equal : " + (name == name2));
-
-         String s1 = "12345";
-         String s2 = "1234" + "5";
-         String s3 = new String("12345");
-         String s4 = "12345";
-
-        System.out.println();
-        System.out.println(s1 == s2);
-        System.out.println(s1 == s3);
-        System.out.println(s1 == s4);
-        System.out.println(s2 == s3);
-        System.out.println(s2 == s4);
-        System.out.println(s3 == s4);
-        System.out.println();
-
-
-        System.out.println(Integer.valueOf(1).equals(Long.valueOf(1)));
-        Launcher launcher = new Launcher();
-
-        Integer[] sols = {1, 2, 3};
-
-        System.out.println(Arrays.asList(sols).contains(1));
-
-        Thread thread = new Thread();
-        launcher.recFind(1, 0, launcher.v.length - 1);*/
     }
+
+    private static boolean isEven(int number) {
+        return number % 2 == 0;
+    }
+
+
 
     int recFind(double searchKey, int lowerBound, int upperBound) {
         System.out.println("lower bound: " + lowerBound + " upper bound: " + upperBound);
@@ -220,7 +178,6 @@ public class Launcher {
         countries.add("Bangladesh");
         countries.add("Bangladesh");
 
-        
 
         countries.remove(0);
 
@@ -229,7 +186,6 @@ public class Launcher {
 
         return countries;
     }
-
 
 
     private static void geometricProgressionTestDrive() {
@@ -272,6 +228,7 @@ public class Launcher {
         }
         System.out.println(1 + 2 + " = " + 1 + 2);
     }
+
 }
 
 

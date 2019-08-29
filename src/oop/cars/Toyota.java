@@ -15,7 +15,7 @@ public class Toyota extends Car {
 
     public Toyota(Boolean inProgress) {
         this.inProgress = inProgress;      // package private or default access
-        System.out.println(Toyota.this.getClass().getName() + " parameterized constructor called");
+        System.out.println("Toyota parameterized constructor called");
     }
 
     @Override
@@ -33,5 +33,9 @@ public class Toyota extends Car {
 
     public String getCompanyInfo() {
         return companyInfo;
+    }
+
+    public void doEnhancements() {
+        System.out.println("Toyota enhancement ...");
     }
 }

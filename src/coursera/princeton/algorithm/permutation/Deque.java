@@ -1,6 +1,5 @@
 package coursera.princeton.algorithm.permutation;
 
-import java.lang.ref.WeakReference;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
@@ -110,14 +109,14 @@ public class Deque<Item> implements Iterable<Item> {
 
     // return an iterator over items in order from front to end
     public Iterator<Item> iterator() {
-        return new DequeIterator<>(new WeakReference<>(this));
+        return new DequeIterator<>();
     }
 
     public static void main(String[] args) {
-        Deque<String> deque = new Deque<>();
-        /*deque.addLast("Hello");
+        /*  Deque<String> deque = new Deque<>();
+         *//*deque.addLast("Hello");
         deque.addLast("World");
-        deque.addLast("!");*/
+        deque.addLast("!");*//*
 
         deque.addFirst("Hello");
         deque.addFirst("World");
@@ -127,16 +126,16 @@ public class Deque<Item> implements Iterable<Item> {
         System.out.print(deque.removeFirst() + " ");
         System.out.print(deque.removeFirst() + " ");
 
-      /*  System.out.print(deque.removeLast() + " ");
+      *//*  System.out.print(deque.removeLast() + " ");
         System.out.print(deque.removeLast() + " ");
-        System.out.print(deque.removeLast() + " ");*/
+        System.out.print(deque.removeLast() + " ");*//*
 //        System.out.print(deque.removeLast() + " ");
 
         for (String string : deque) {
             System.out.print(string + " ");
         }
 
-        System.out.println();
+        System.out.println();*/
     }
 
     private static class Node<Item> {
@@ -145,15 +144,9 @@ public class Deque<Item> implements Iterable<Item> {
         Node<Item> prev;
     }
 
-    private static class DequeIterator<Item> implements Iterator<Item> {
+    private class DequeIterator<Item> implements Iterator<Item> {
 
-        private WeakReference<Deque<Item>> dequeWeakRef;
-        private Node<Item> current;
-
-        DequeIterator(WeakReference<Deque<Item>> dequeWeakRef) {
-            this.dequeWeakRef = dequeWeakRef;
-            this.current = this.dequeWeakRef.get().first;
-        }
+        private Node<Item> current = (Node<Item>) first;
 
         @Override
         public boolean hasNext() {

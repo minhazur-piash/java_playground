@@ -10,8 +10,9 @@ public class Premio extends Toyota {
         System.out.println("Premio default constructor called");
     }
 
+
     public Premio(String model) {
-//        super(true);
+//        super(true); // super() call must be the first statement in a constructor
         System.out.println("Premio parameterized constructor called");
         this.model = model;
     }
@@ -30,5 +31,11 @@ public class Premio extends Toyota {
 
     public void printBrandName() {
         System.out.println("[" + Premio.class.getName() + "]" + " Car brandName " + this.brandName);
+    }
+
+    @Override
+    public void doEnhancements() {
+        super.doEnhancements();     // super can be called at first or after any statements
+        System.out.println("Premio enhancement ...");
     }
 }

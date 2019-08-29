@@ -7,7 +7,6 @@ import java.util.NoSuchElementException;
 
 public class RandomizedQueue<Item> implements Iterable<Item> {
     private int size;
-    private int firstIndex = 0;
     private int index;
     private Item[] items;
 
@@ -68,12 +67,7 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
         }
 
         int randomIndex = StdRandom.uniform(items.length);
-        if (items[randomIndex] == null) {
-            return dequeue();
-        }
-
-        Item item = items[randomIndex];
-        return item;
+        return items[randomIndex];
     }
 
     // return an independent iterator over items in random order
@@ -102,21 +96,24 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
 
     private class RandomizedQueueIterator<Item> implements Iterator<Item> {
 
-        private int currentIndex = index;
+        private int currentIndex = StdRandom.uniform(size);
+        private int itemProcessed = 0;
 
         @Override
         public boolean hasNext() {
-            return currentIndex < size;
+            return itemProcessed < size;
         }
 
         @Override
         public Item next() {
-            if (currentIndex == size) {
+            if (!hasNext()) {
                 throw new NoSuchElementException();
             }
 
-            Item item = (Item) items[currentIndex];
+            int index = (currentIndex % size);
+            Item item = (Item) items[index];
             currentIndex++;
+            itemProcessed++;
             return item;
         }
 
