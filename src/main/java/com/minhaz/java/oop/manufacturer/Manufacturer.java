@@ -1,7 +1,7 @@
 package com.minhaz.java.oop.manufacturer;
 
-import main.oop.cars.Car;
-import main.oop.cars.Premio;
+import com.minhaz.java.oop.cars.Car;
+import com.minhaz.java.oop.cars.Premio;
 
 /**
  * Created by Frenclub on 8/24/15.

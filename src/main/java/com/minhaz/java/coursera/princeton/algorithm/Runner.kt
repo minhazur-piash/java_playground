@@ -1,4 +1,4 @@
-import main.coursera.princeton.algorithm.ShellSort
+import com.minhaz.java.coursera.princeton.algorithm.ShellSort
 
 fun main() {
     val numbers = intArrayOf(3, 2, 100, 1, 4, 5, 200, 49, 40, 12, 7)
