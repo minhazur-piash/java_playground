@@ -29,7 +29,7 @@ public class Premio extends Toyota {
         System.out.println("Model name " + model);
     }
 
-    public void printBrandName() {
+     public void printBrandName() {
         System.out.println("[" + Premio.class.getName() + "]" + " Car brandName " + this.brandName);
     }
 

@@ -21,6 +21,6 @@ public class Duplicates {
             }
         }
 
-        System.out.println(count);
+        System.out.println("13"+3+5);
     }
 }

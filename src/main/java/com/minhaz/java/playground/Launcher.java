@@ -19,10 +19,13 @@ public class Launcher {
     }
 
     public static void main(String[] args) {
-        SecureRandom random = new SecureRandom();
-        int num = random.nextInt(10000);
-        String formatted = String.format("%04d", num);
-        System.out.println(formatted);
+
+        List<Integer> list = Arrays.asList(1, 2, 3, 4);
+        ListIterator iter = list.listIterator();
+        while (iter.hasNext()) {
+            System.out.println(iter.nextIndex() + " " + iter.next());
+        }
+
     }
 
     private static boolean isEven(int number) {
