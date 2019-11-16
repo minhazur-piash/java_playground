@@ -2,7 +2,6 @@ package com.minhaz.java.playground;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
-import java.security.SecureRandom;
 import java.util.*;
 
 /**
@@ -21,10 +20,6 @@ public class Launcher {
     public static void main(String[] args) {
 
         List<Integer> list = Arrays.asList(1, 2, 3, 4);
-        ListIterator iter = list.listIterator();
-        while (iter.hasNext()) {
-            System.out.println(iter.nextIndex() + " " + iter.next());
-        }
 
     }
 
