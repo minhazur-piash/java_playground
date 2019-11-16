@@ -32,6 +32,7 @@ public class ThreadInterruption {
                 } catch (InterruptedException e) {
                     System.out.println(getName() + " sleep interrupted. Message: " + e.getMessage());
                     e.printStackTrace();
+//                    Thread.currentThread().interrupt();
                     //return //returning from here will stop the thread.
                 }
             }
