@@ -26,13 +26,13 @@ public class QuickSort {
         }
     }
 
-    public int  partitionIt(int[] arr, int left, int right, int pivot)  {
+    public int partitionIt(int[] arr, int left, int right, int pivot) {
         int leftMark = left - 1;
         int rightMark = right;
 
         while (true) {
             while (arr[++leftMark] < pivot) ;
-            while (rightMark > 0 && arr[--rightMark] > pivot);
+            while (rightMark > 0 && arr[--rightMark] > pivot) ;
 
             if (leftMark >= rightMark) {
                 break;

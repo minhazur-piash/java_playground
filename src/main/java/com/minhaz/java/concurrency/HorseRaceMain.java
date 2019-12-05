@@ -1,4 +1,4 @@
-package com.minhaz.java.javathread;
+package com.minhaz.java.concurrency;
 
 /**
  * This class contains the main routine that initiates the multi-threaded

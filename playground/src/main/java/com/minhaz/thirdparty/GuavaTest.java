@@ -3,8 +3,10 @@ package com.minhaz.thirdparty;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.common.hash.Hashing;
+import org.json.JSONObject;
 
 import java.nio.charset.StandardCharsets;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -18,18 +20,21 @@ public class GuavaTest {
         boolean deleveled = isPalindrome(null);
         System.out.println("is palindrome = " + deleveled);
 
-        Map<String,Object> map = new HashMap<>();
-//You can convert any Object.
-        map.put("key3","string1");
-        map.put("key4","string2");
+        Map<String, Object> map = new HashMap<>();
+        // You can convert any Object.
+        map.put("key3", "string1");
+        map.put("key4", "string2");
 
-        String json = null;
+       /* String json = null;
         try {
             json = new ObjectMapper().writeValueAsString(map);
             System.out.println(json);
         } catch (JsonProcessingException e) {
             e.printStackTrace();
-        }
+        }*/
+
+
+        System.out.println("JSON: " + new JSONObject(map).toString());
 
 
     }

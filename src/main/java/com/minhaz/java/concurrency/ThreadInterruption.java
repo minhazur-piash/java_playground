@@ -1,4 +1,4 @@
-package com.minhaz.java.javathread;
+package com.minhaz.java.concurrency;
 
 public class ThreadInterruption {
 

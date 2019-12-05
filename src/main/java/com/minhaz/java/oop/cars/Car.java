@@ -1,17 +1,18 @@
 package com.minhaz.java.oop.cars;
 
 /**
- * Created by Frenclub on 8/24/15.
+ * Created by Minhaz on 8/24/15.
  */
 public abstract class Car {
     private String test;
     protected String brandName;
     boolean inProgress;
 
-    //default constructor is must for a base class if there is a parameterized constructor in it.
+    // default constructor is must for a base class if there is a parameterized constructor in it
+    // and subclasses doesn't explicitly call super(args,...) from the constructors
     // If constructor is private, class can not be inherited
     public Car() {
-        System.out.println("Car deafault constructor called");
+        System.out.println("Car's default constructor called");
     }
 
     public Car(boolean inProgress) {

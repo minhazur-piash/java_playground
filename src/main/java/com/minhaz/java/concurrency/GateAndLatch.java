@@ -1,4 +1,4 @@
-package com.minhaz.java.javathread;
+package com.minhaz.java.concurrency;
 
 import java.util.concurrent.CountDownLatch;
 
@@ -10,7 +10,6 @@ public class GateAndLatch {
             System.out.println("Task run....");
         });
         System.out.println("time = " + time);
-
     }
 }
 
@@ -18,7 +17,7 @@ class TestHarness {
 
     long timeTasks(int nThreads, final Runnable task) throws InterruptedException {
         final CountDownLatch startGate = new CountDownLatch(1);
-        final CountDownLatch endGate = new CountDownLatch(nThreads);
+        final CountDownLatch endGate = new CountDownLatch(nThreads); //adding n number of latches to open end gate
 
         for (int i = 0; i < nThreads; i++) {
             Thread t = new Thread(() -> {
@@ -30,7 +29,6 @@ class TestHarness {
                     } finally {
                         endGate.countDown();
                     }
-
                 } catch (InterruptedException ignored) {
                 }
 

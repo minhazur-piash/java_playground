@@ -1,4 +1,4 @@
-package com.minhaz.java.javathread;
+package com.minhaz.java.concurrency;
 
 /**
  * Representation of a horse race.  This class is used to synchronize the
