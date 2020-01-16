@@ -8,6 +8,13 @@ import java.util.stream.Stream;
 public class Experiment {
     public static void main(String[] args) {
 
+        Runnable runnable = () -> {
+            System.out.println("thread running....");
+        };
+
+        new Thread(runnable)
+                .start();
+
         String[] names = {"Peter", "Paul", "Mary"};
         List<Runnable> runners = new ArrayList<>();
         for (String name : names) {

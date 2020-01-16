@@ -19,6 +19,7 @@ public class Launcher {
 
     public static void main(String[] args) {
 
+
         new HashMap<String, String>().put("token", "accessToken");
 
         List<Integer> list = Arrays.asList(1, 2, 3, 4);
