@@ -9,10 +9,14 @@ fun foo(m: String, bar: (m: String) -> Unit) {
 
 fun main() {
 
-    Locale.getAvailableLocales().forEach { println(it.country) }
+    Locale.getAvailableLocales().forEach { it -> println(it.country) }
 
     val bar: (String) -> Unit = {
         println(it)
     }
     foo("hello", bar = bar)
+
+    Thread({
+
+    }).start()
 }
