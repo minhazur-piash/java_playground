@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<module type="JAVA_MODULE" version="4">
-  <component name="ExternalSystem" linkedProjectPath="$MODULE_DIR$/module2" rootProjectPath="$MODULE_DIR$/module2" />
+<module external.linked.project.path="$MODULE_DIR$/module2" external.root.project.path="$MODULE_DIR$/module2" type="JAVA_MODULE" version="4">
+  <component name="ExternalSystem" linkedProjectPath="$MODULE_DIR$/gradle-module" rootProjectPath="$MODULE_DIR$/gradle-module" />
   <component name="NewModuleRootManager" inherit-compiler-output="true">
     <exclude-output />
     <content url="file://$MODULE_DIR$">
@@ -10,7 +10,6 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="junit-4.12" level="project" />
-    <orderEntry type="library" name="lib" level="project" />
     <orderEntry type="library" name="KotlinJavaRuntime" level="project" />
     <orderEntry type="library" name="algs4" level="project" />
     <orderEntry type="library" name="junit-4.12" level="project" />
