@@ -5,7 +5,7 @@
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/src/main/java" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/gradle-module" />
-      <excludeFolder url="file://$MODULE_DIR$/playground" />
+      <excludeFolder url="file://$MODULE_DIR$/maven-module" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
