@@ -27,6 +27,7 @@
 package com.holub.database.jdbc;
 
 import com.holub.database.Database;
+import com.holub.database.Table;
 import com.holub.database.jdbc.adapters.StatementAdapter;
 
 import java.sql.ResultSet;

@@ -1,5 +1,10 @@
 package com.minhaz.java.basic;
 
+import java.text.NumberFormat;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
 public class BasicJava {
     private long value = 1000;
 
@@ -22,5 +27,11 @@ public class BasicJava {
         {
             System.out.println("===> empty code block");
         }
+
+        List<String> names = new ArrayList<>();
+
+        String str = null;
+
+
     }
 }

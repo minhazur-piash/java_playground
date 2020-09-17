@@ -7,9 +7,15 @@ fun foo(m: String, bar: (m: String) -> Unit) {
     bar(m)
 }
 
-fun main() {
+fun String.containsDigit(): Boolean {
+    val regex = Regex.fromLiteral("a13")
+    return this.matches(regex)
+}
 
-    Locale.getAvailableLocales().forEach { it -> println(it.country) }
+fun main() {
+    println("a13bc".containsDigit());
+
+    /*Locale.getAvailableLocales().forEach { it -> println(it.country) }
 
     val bar: (String) -> Unit = {
         println(it)
@@ -18,5 +24,5 @@ fun main() {
 
     Thread({
 
-    }).start()
+    }).start()*/
 }

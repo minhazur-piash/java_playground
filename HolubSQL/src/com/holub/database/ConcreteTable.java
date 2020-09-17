@@ -72,7 +72,7 @@ import java.util.*;
     /**********************************************************************
      *  Create a table with the given name and columns.
      *  @param tableName the name of the table.
-     *  @param an array of Strings that specify the column names.
+     *  @param columnNames an array of Strings that specify the column names.
      */
     public ConcreteTable(String tableName, String[] columnNames) {
         this.tableName = tableName;
@@ -398,7 +398,7 @@ import java.util.*;
     }
 
     // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-    public Table select(Selector where, String[] requestedColumns) {
+    public Table  select(Selector where, String[] requestedColumns) {
         if (requestedColumns == null)
             return select(where);
 

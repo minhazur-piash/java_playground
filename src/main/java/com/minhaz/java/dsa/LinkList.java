@@ -1,6 +1,5 @@
 package com.minhaz.java.dsa;
 
-import com.sun.istack.internal.Nullable;
 
 public class LinkList {
 
@@ -10,8 +9,8 @@ public class LinkList {
         }
 
         int value;
-        @Nullable Node next;
-        @Nullable Node prev;
+        Node next;
+        Node prev;
     }
 
     public static void main(String[] args) {
@@ -62,7 +61,6 @@ public class LinkList {
 
 
     /**
-     *
      * @param node Fist node from the list
      * @return returns first node after reversed
      */
@@ -83,7 +81,6 @@ public class LinkList {
     }
 
     /**
-     *
      * @param currentNode Fist node from the list
      * @return returns first node after reversed
      */

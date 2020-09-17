@@ -1,6 +1,5 @@
 package com.minhaz.java.dsa;
 
-import com.sun.tools.javac.util.ArrayUtils;
 
 import java.util.Arrays;
 import java.util.stream.IntStream;
@@ -8,7 +7,7 @@ import java.util.stream.IntStream;
 public class QSort {
 
     public static void main(String[] args) {
-        int[] numbers = new int[] {10, 1, 3, 2, 100};
+        int[] numbers = new int[]{10, 1, 3, 2, 100};
         Arrays.stream(new QSort().quickSort(numbers)).forEach(System.out::println);
     }
 
