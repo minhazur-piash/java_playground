@@ -1,7 +1,5 @@
 package com.minhaz.java.kotlin
 
-import java.util.*
-
 
 fun foo(m: String, bar: (m: String) -> Unit) {
     bar(m)
@@ -13,7 +11,9 @@ fun String.containsDigit(): Boolean {
 }
 
 fun main() {
-    println("a13bc".containsDigit());
+    doSomething {
+        println("msg $it")
+    }
 
     /*Locale.getAvailableLocales().forEach { it -> println(it.country) }
 
@@ -25,4 +25,8 @@ fun main() {
     Thread({
 
     }).start()*/
+}
+
+fun doSomething(action: (str: String) -> Unit) {
+    action("hello")
 }
