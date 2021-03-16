@@ -6,6 +6,7 @@ package com.minhaz.java.oop.cars;
 public class Premio extends Toyota {
     private String model;
 
+
     public Premio() {
         System.out.println("Premio default constructor called");
     }

@@ -6,6 +6,10 @@ fun main() {
         async {
             delayedPrint()
         }
+
+        launch(Dispatchers.Main) {
+
+        }
     }
 
 }
